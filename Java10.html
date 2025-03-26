@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Morning Greeting</h1>
+    <input type="text" name= "name" id="name Input">
+    <button onclick="readInput()"> Good Morning!</button>
+
+    <Script>
+            function readInput() {
+               var input = document.getElementsByName("name")[0].value;
+                console.log(input);
+                try{
+                    if (input == "Peter") throw "i dont like you!";
+                } catch (err) {
+                    alert(err);
+                    return;
+                }
+                alert("Good morning" + input) ;
+            }
+    </Script>
+</body>
+</html>

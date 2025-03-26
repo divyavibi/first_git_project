@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>How much is your car insurance?</h1>
+    <input type="number" name="carAge" id="carAge">
+    <button onclick="calculateInsurance()"> calculate!</button>
+    <script>
+        function calculateInsurance() {
+               var carAge = Number (document.getElementsByName("carAge")[0].
+               value);
+                try{
+                    if (carAge <0 ) throw "We do not insure time travellers";
+                    if (carAge > 100) throw "We do not insure oldtimers";
+                } catch (err) {
+                    alert(err);
+                    return;
+                }
+                var insurancePrice= carAge * 3;
+                alert("your insurance has a mothly cost of:" + insurancePrice) ;
+            }
+    </script>
+</body>
+</html>

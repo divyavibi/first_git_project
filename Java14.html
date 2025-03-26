@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <title>Guess Counter</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    .counter {
+      font-size: 24px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  
+    <h1>The greatest game ever conceived</h1>
+    <div>
+    <h3>Please set the number</h3>
+    <button onclick="setNumber()">Set</button>
+    <h3 id="numberMessage"></h3>
+   </div> 
+   <div>
+    <h1>Guess Counter</h1>
+  <p>Every time you guess, the counter will increase!</p>
+
+  <!-- Guess Button -->
+  <button id="guessButton">Make a Guess</button>
+
+  <!-- Counter Display -->
+  <div class="counter">
+    <p>Guesses made: <span id="counterValue">0</span></p>
+  </div>
+
+  <script>
+    // Initialize the counter variable
+    let counter = 0;
+
+    // Get the elements for the button and the counter display
+    const counterValueElement = document.getElementById('counterValue');
+    const guessButton = document.getElementById('guessButton');
+
+    // Event listener for button click
+    guessButton.addEventListener('click', function() {
+      // Increment the counter
+      counter++;
+
+      // Update the displayed counter value
+      counterValueElement.textContent = counter;
+    });
+  </script>
+   </div>
+   <h3>Submit your guess!</h3>
+   <input type="number" id="userGuess">
+   <button onclick="guessNumber()">Guess</button>
+   <h3 id="guessMessage"></h3>
+
+    </script>
+
+   <script>
+   var numberTOGUESS = null;
+
+   function setNumber() {
+        numberTOGUESS = Math.floor(Math.random() * 11);
+        document.getElementById("numberMessage").innerHTML = "Number has been set. Good Luck!";
+   }
+   function guessNumber() {
+    var userNumber = Number (document.getElementById("userGuess").value);
+    if(userNumber == numberTOGUESS) {
+        document.getElementById("guessMessage").innerHTML = "You have won!"
+    } else {
+        document.getElementById("guessMessage").innerHTML = "Wrong Guess"
+    }
+   }
+   // Expansion one: on the website, there should be a counter that tells me how often i have guessed. in the begining it show 0. Every time i guess, it should increase by one.
+
+   // Expansion two: there is a maximus amount of guesses. If i reaches that, they loose and are told so.
+
+   // Expansion three: the player can define what the maximun amount of guesses is.
+   </script>
+</body>
+</html>
