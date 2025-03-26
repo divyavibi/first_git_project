@@ -1,0 +1,25 @@
+header img, nav, header{
+    float: left;
+}
+header img {
+    height: 100px;
+}
+nav a{
+    line-height: 100px;
+    font-size: 250%;
+    color: darkorange;
+    text-decoration: none;
+    margin-left:50px;
+}
+main{
+    clear: both;
+    padding: 100px;
+    min-height: 200px;
+    border-top: 2px solid darkorange;
+    border-bottom: 2px solid darkorange;
+}
+footer{
+    height: 200px;
+    padding: 50px;
+    text-align: center;
+}
